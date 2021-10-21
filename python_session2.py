@@ -356,9 +356,9 @@ while x < len(a):
 	x += 2
 
 
-# x = 0
-# 0 < 10 --> True
-#   print(a[0]) --> 1
+x = 0
+0 < 10 --> True
+  print(a[0]) --> 1
 
 # x = 2
 # 2 < 10 --> True
