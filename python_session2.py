@@ -385,7 +385,12 @@
 # 3 < 10 --> True
 #  print(a[3]) --> 4
 
-print("Hello World!")
+a = "Hello World"
+b = " "
+
+# print(b)
+print(a[-2].upper())
+
 
 
 
