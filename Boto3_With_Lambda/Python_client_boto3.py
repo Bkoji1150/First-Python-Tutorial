@@ -141,20 +141,10 @@ def main():
     with table_name_salse.batch_writer() as batch:
         for i, row in df_salse.iterrows():
             decimal = row.to_dict()['Price Each']
-            #decimal_value = json.loads(json.dumps(decimal), parse_float=Decimal)
-            #decimal_value['Price Each']
+            
             db_data = json.loads(json.dumps(decimal), parse_float=Decimal)
             batch.put_item(Item=db_data)
     print("DynamoDB put_items completed for salse")    
-            
-   
-    # """ Batch writer object called. """
-    # batch_writer = get_object(list_of_buckets='dynamo-to-lambda-csv', path='batch_write.json')
-    # list_of_batch = json.loads(batch_writer)
-
-    # response = dynamo_batch(table, list_of_batch)
-    # print(response)
-    
     
 if __name__ == '__main__':
     main()
